@@ -14,6 +14,21 @@
 		44B0320423ABC12A0009A789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B0320223ABC12A0009A789 /* LaunchScreen.storyboard */; };
 		44B0320F23ABC12A0009A789 /* DubizzleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0320E23ABC12A0009A789 /* DubizzleAppTests.swift */; };
 		44B0321A23ABC12A0009A789 /* DubizzleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0321923ABC12A0009A789 /* DubizzleAppUITests.swift */; };
+		44B0322A23ABCA3F0009A789 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0322923ABCA3F0009A789 /* ProductCell.swift */; };
+		44B0322B23ABCA3F0009A789 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0322923ABCA3F0009A789 /* ProductCell.swift */; };
+		44B0322C23ABCA3F0009A789 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0322923ABCA3F0009A789 /* ProductCell.swift */; };
+		44B0323323ACB92F0009A789 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323223ACB92F0009A789 /* AppConstants.swift */; };
+		44B0323423ACB92F0009A789 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323223ACB92F0009A789 /* AppConstants.swift */; };
+		44B0323523ACB92F0009A789 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323223ACB92F0009A789 /* AppConstants.swift */; };
+		44B0323723ACB9980009A789 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323623ACB9980009A789 /* NetworkConstants.swift */; };
+		44B0323823ACB9980009A789 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323623ACB9980009A789 /* NetworkConstants.swift */; };
+		44B0323923ACB9980009A789 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323623ACB9980009A789 /* NetworkConstants.swift */; };
+		44B0323C23ACBAAB0009A789 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323B23ACBAAB0009A789 /* NetworkManager.swift */; };
+		44B0323D23ACBAAB0009A789 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323B23ACBAAB0009A789 /* NetworkManager.swift */; };
+		44B0323E23ACBAAB0009A789 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0323B23ACBAAB0009A789 /* NetworkManager.swift */; };
+		44B0324323ACBF2F0009A789 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324223ACBF2F0009A789 /* ProductModel.swift */; };
+		44B0324423ACBF2F0009A789 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324223ACBF2F0009A789 /* ProductModel.swift */; };
+		44B0324523ACBF2F0009A789 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324223ACBF2F0009A789 /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +62,11 @@
 		44B0321523ABC12A0009A789 /* DubizzleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DubizzleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B0321923ABC12A0009A789 /* DubizzleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DubizzleAppUITests.swift; sourceTree = "<group>"; };
 		44B0321B23ABC12A0009A789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B0322923ABCA3F0009A789 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		44B0323223ACB92F0009A789 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		44B0323623ACB9980009A789 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		44B0323B23ACBAAB0009A789 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		44B0324223ACBF2F0009A789 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +117,12 @@
 		44B031F823ABC1270009A789 /* DubizzleApp */ = {
 			isa = PBXGroup;
 			children = (
+				44B0324123ACBF1B0009A789 /* Models */,
+				44B0323A23ACBA5E0009A789 /* Network */,
+				44B0322D23ACB8EC0009A789 /* Constants */,
+				44B0322723ABCA050009A789 /* UI */,
 				44B031F923ABC1270009A789 /* AppDelegate.swift */,
-				44B031FB23ABC1270009A789 /* ViewController.swift */,
-				44B031FD23ABC1270009A789 /* Main.storyboard */,
 				44B0320023ABC12A0009A789 /* Assets.xcassets */,
-				44B0320223ABC12A0009A789 /* LaunchScreen.storyboard */,
 				44B0320523ABC12A0009A789 /* Info.plist */,
 			);
 			path = DubizzleApp;
@@ -123,6 +144,66 @@
 				44B0321B23ABC12A0009A789 /* Info.plist */,
 			);
 			path = DubizzleAppUITests;
+			sourceTree = "<group>";
+		};
+		44B0322723ABCA050009A789 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				44B0324023ACBBBA0009A789 /* ViewControllers */,
+				44B0323F23ACBBB10009A789 /* Storyboards */,
+				44B0322823ABCA110009A789 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		44B0322823ABCA110009A789 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44B0322923ABCA3F0009A789 /* ProductCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		44B0322D23ACB8EC0009A789 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				44B0323223ACB92F0009A789 /* AppConstants.swift */,
+				44B0323623ACB9980009A789 /* NetworkConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		44B0323A23ACBA5E0009A789 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				44B0323B23ACBAAB0009A789 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		44B0323F23ACBBB10009A789 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				44B031FD23ABC1270009A789 /* Main.storyboard */,
+				44B0320223ABC12A0009A789 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		44B0324023ACBBBA0009A789 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44B031FB23ABC1270009A789 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44B0324123ACBF1B0009A789 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				44B0324223ACBF2F0009A789 /* ProductModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +337,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B0323C23ACBAAB0009A789 /* NetworkManager.swift in Sources */,
+				44B0322A23ABCA3F0009A789 /* ProductCell.swift in Sources */,
 				44B031FC23ABC1270009A789 /* ViewController.swift in Sources */,
+				44B0323723ACB9980009A789 /* NetworkConstants.swift in Sources */,
 				44B031FA23ABC1270009A789 /* AppDelegate.swift in Sources */,
+				44B0324323ACBF2F0009A789 /* ProductModel.swift in Sources */,
+				44B0323323ACB92F0009A789 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B0323823ACB9980009A789 /* NetworkConstants.swift in Sources */,
+				44B0324423ACBF2F0009A789 /* ProductModel.swift in Sources */,
 				44B0320F23ABC12A0009A789 /* DubizzleAppTests.swift in Sources */,
+				44B0323D23ACBAAB0009A789 /* NetworkManager.swift in Sources */,
+				44B0323423ACB92F0009A789 /* AppConstants.swift in Sources */,
+				44B0322B23ABCA3F0009A789 /* ProductCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44B0323923ACB9980009A789 /* NetworkConstants.swift in Sources */,
+				44B0324523ACBF2F0009A789 /* ProductModel.swift in Sources */,
 				44B0321A23ABC12A0009A789 /* DubizzleAppUITests.swift in Sources */,
+				44B0323E23ACBAAB0009A789 /* NetworkManager.swift in Sources */,
+				44B0323523ACB92F0009A789 /* AppConstants.swift in Sources */,
+				44B0322C23ABCA3F0009A789 /* ProductCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

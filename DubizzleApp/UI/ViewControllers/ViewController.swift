@@ -30,11 +30,13 @@ class ViewController: UIViewController {
     //MARK: API calls
     
     func getProductList() {
+        ProgressView.sharedInstance.showProgressViewNow()
         let productNetworkAdapter = ProductNetworkAdapter()
         productNetworkAdapter.getProducts { (products, error) in
             self.productList = products
             DispatchQueue.main.async {
-                self.productListCollectionView.reloadData()
+                ProgressView.sharedInstance.hideProgressView()
+                self.productListCollectionView.reloadData()                
             }            
         }
     }
@@ -58,7 +60,10 @@ extension ViewController: UICollectionViewDataSource {
         
         cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
         cell.productNameLabel.text = products[indexPath.row].productName
-        cell.productPriceLabel.text = "AED \(String(describing: products[indexPath.row].productPrice))"
+        cell.productNameLabel.textColor = .white
+        
+        cell.productPriceLabel.text = "\(String(describing: products[indexPath.row].productPrice!))"
+        cell.productPriceLabel.textColor = .white
         return cell
     }
 }

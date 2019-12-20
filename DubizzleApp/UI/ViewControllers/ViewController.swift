@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import SDWebImage
 
 class ViewController: UIViewController {
     
@@ -55,7 +56,7 @@ extension ViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.productImageView.image = UIImage(named: thumbnailURLs[0])
+        cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
         cell.productNameLabel.text = products[indexPath.row].productName
         cell.productPriceLabel.text = "AED \(String(describing: products[indexPath.row].productPrice))"
         return cell

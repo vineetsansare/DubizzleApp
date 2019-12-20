@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,6 +29,12 @@
 		44B0324323ACBF2F0009A789 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324223ACBF2F0009A789 /* ProductModel.swift */; };
 		44B0324423ACBF2F0009A789 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324223ACBF2F0009A789 /* ProductModel.swift */; };
 		44B0324523ACBF2F0009A789 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324223ACBF2F0009A789 /* ProductModel.swift */; };
+		44B0324D23ACE0E60009A789 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324C23ACE0E60009A789 /* ProgressView.swift */; };
+		44B0324E23ACE0E60009A789 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324C23ACE0E60009A789 /* ProgressView.swift */; };
+		44B0324F23ACE0E60009A789 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B0324C23ACE0E60009A789 /* ProgressView.swift */; };
+		985C19492BD94ECCC2C4BD31 /* Pods_DubizzleApp_DubizzleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77CCE534FCEC3DBCE044D29B /* Pods_DubizzleApp_DubizzleAppUITests.framework */; };
+		BF9992364C4ADCA5F3F7E8AA /* Pods_DubizzleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6644B0F05DD5FBD9F3DED3B /* Pods_DubizzleAppTests.framework */; };
+		D16AFF2AE1226C0F9867F3B2 /* Pods_DubizzleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ACAFB76AC3A692D63657264 /* Pods_DubizzleApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00135877E9BCAF73577B0367 /* Pods-DubizzleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleAppTests.release.xcconfig"; path = "Target Support Files/Pods-DubizzleAppTests/Pods-DubizzleAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		106D42681B316538ED90C9AD /* Pods-DubizzleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleApp.release.xcconfig"; path = "Target Support Files/Pods-DubizzleApp/Pods-DubizzleApp.release.xcconfig"; sourceTree = "<group>"; };
 		44B031F623ABC1270009A789 /* DubizzleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DubizzleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B031F923ABC1270009A789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44B031FB23ABC1270009A789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +75,14 @@
 		44B0323623ACB9980009A789 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		44B0323B23ACBAAB0009A789 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		44B0324223ACBF2F0009A789 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		44B0324C23ACE0E60009A789 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		748F0ABCDF9A0E3A9B2405D7 /* Pods-DubizzleApp-DubizzleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleApp-DubizzleAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-DubizzleApp-DubizzleAppUITests/Pods-DubizzleApp-DubizzleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		77CCE534FCEC3DBCE044D29B /* Pods_DubizzleApp_DubizzleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubizzleApp_DubizzleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7ACAFB76AC3A692D63657264 /* Pods_DubizzleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubizzleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A12FCA23D07948DF559CF09 /* Pods-DubizzleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleAppTests.debug.xcconfig"; path = "Target Support Files/Pods-DubizzleAppTests/Pods-DubizzleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDDB1E1D267E7F995FB6FEC1 /* Pods-DubizzleApp-DubizzleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleApp-DubizzleAppUITests.release.xcconfig"; path = "Target Support Files/Pods-DubizzleApp-DubizzleAppUITests/Pods-DubizzleApp-DubizzleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F6644B0F05DD5FBD9F3DED3B /* Pods_DubizzleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DubizzleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC69AA6F84239486719E9CC4 /* Pods-DubizzleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DubizzleApp.debug.xcconfig"; path = "Target Support Files/Pods-DubizzleApp/Pods-DubizzleApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16AFF2AE1226C0F9867F3B2 /* Pods_DubizzleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9992364C4ADCA5F3F7E8AA /* Pods_DubizzleAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				985C19492BD94ECCC2C4BD31 /* Pods_DubizzleApp_DubizzleAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +120,8 @@
 				44B0320D23ABC12A0009A789 /* DubizzleAppTests */,
 				44B0321823ABC12A0009A789 /* DubizzleAppUITests */,
 				44B031F723ABC1270009A789 /* Products */,
+				C35BE5928D1516EB1ED4E00D /* Pods */,
+				B4BAF462212DAD1FF3AFDE1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +180,7 @@
 		44B0322823ABCA110009A789 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				44B0324B23ACE0D20009A789 /* ProgressView */,
 				44B0322923ABCA3F0009A789 /* ProductCell.swift */,
 			);
 			path = Views;
@@ -206,6 +228,37 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		44B0324B23ACE0D20009A789 /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				44B0324C23ACE0E60009A789 /* ProgressView.swift */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		B4BAF462212DAD1FF3AFDE1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7ACAFB76AC3A692D63657264 /* Pods_DubizzleApp.framework */,
+				77CCE534FCEC3DBCE044D29B /* Pods_DubizzleApp_DubizzleAppUITests.framework */,
+				F6644B0F05DD5FBD9F3DED3B /* Pods_DubizzleAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C35BE5928D1516EB1ED4E00D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC69AA6F84239486719E9CC4 /* Pods-DubizzleApp.debug.xcconfig */,
+				106D42681B316538ED90C9AD /* Pods-DubizzleApp.release.xcconfig */,
+				748F0ABCDF9A0E3A9B2405D7 /* Pods-DubizzleApp-DubizzleAppUITests.debug.xcconfig */,
+				CDDB1E1D267E7F995FB6FEC1 /* Pods-DubizzleApp-DubizzleAppUITests.release.xcconfig */,
+				9A12FCA23D07948DF559CF09 /* Pods-DubizzleAppTests.debug.xcconfig */,
+				00135877E9BCAF73577B0367 /* Pods-DubizzleAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44B0321E23ABC12A0009A789 /* Build configuration list for PBXNativeTarget "DubizzleApp" */;
 			buildPhases = (
+				AC1C71DC6B40A728EDE0559C /* [CP] Check Pods Manifest.lock */,
 				44B031F223ABC1270009A789 /* Sources */,
 				44B031F323ABC1270009A789 /* Frameworks */,
 				44B031F423ABC1270009A789 /* Resources */,
+				FCCDDC6ABEB3721187023E61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44B0322123ABC12A0009A789 /* Build configuration list for PBXNativeTarget "DubizzleAppTests" */;
 			buildPhases = (
+				37CADC07A2F5E3A612B7CCE7 /* [CP] Check Pods Manifest.lock */,
 				44B0320623ABC12A0009A789 /* Sources */,
 				44B0320723ABC12A0009A789 /* Frameworks */,
 				44B0320823ABC12A0009A789 /* Resources */,
@@ -248,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44B0322423ABC12A0009A789 /* Build configuration list for PBXNativeTarget "DubizzleAppUITests" */;
 			buildPhases = (
+				9DC05BD6F529CFD0154C0DF9 /* [CP] Check Pods Manifest.lock */,
 				44B0321123ABC12A0009A789 /* Sources */,
 				44B0321223ABC12A0009A789 /* Frameworks */,
 				44B0321323ABC12A0009A789 /* Resources */,
+				C871635EB04887FF77EFEB30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -332,6 +390,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37CADC07A2F5E3A612B7CCE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DubizzleAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DC05BD6F529CFD0154C0DF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DubizzleApp-DubizzleAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC1C71DC6B40A728EDE0559C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DubizzleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C871635EB04887FF77EFEB30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DubizzleApp-DubizzleAppUITests/Pods-DubizzleApp-DubizzleAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DubizzleApp-DubizzleAppUITests/Pods-DubizzleApp-DubizzleAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DubizzleApp-DubizzleAppUITests/Pods-DubizzleApp-DubizzleAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCCDDC6ABEB3721187023E61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DubizzleApp/Pods-DubizzleApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DubizzleApp/Pods-DubizzleApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DubizzleApp/Pods-DubizzleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		44B031F223ABC1270009A789 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -342,6 +503,7 @@
 				44B031FC23ABC1270009A789 /* ViewController.swift in Sources */,
 				44B0323723ACB9980009A789 /* NetworkConstants.swift in Sources */,
 				44B031FA23ABC1270009A789 /* AppDelegate.swift in Sources */,
+				44B0324D23ACE0E60009A789 /* ProgressView.swift in Sources */,
 				44B0324323ACBF2F0009A789 /* ProductModel.swift in Sources */,
 				44B0323323ACB92F0009A789 /* AppConstants.swift in Sources */,
 			);
@@ -355,6 +517,7 @@
 				44B0324423ACBF2F0009A789 /* ProductModel.swift in Sources */,
 				44B0320F23ABC12A0009A789 /* DubizzleAppTests.swift in Sources */,
 				44B0323D23ACBAAB0009A789 /* NetworkManager.swift in Sources */,
+				44B0324E23ACE0E60009A789 /* ProgressView.swift in Sources */,
 				44B0323423ACB92F0009A789 /* AppConstants.swift in Sources */,
 				44B0322B23ABCA3F0009A789 /* ProductCell.swift in Sources */,
 			);
@@ -368,6 +531,7 @@
 				44B0324523ACBF2F0009A789 /* ProductModel.swift in Sources */,
 				44B0321A23ABC12A0009A789 /* DubizzleAppUITests.swift in Sources */,
 				44B0323E23ACBAAB0009A789 /* NetworkManager.swift in Sources */,
+				44B0324F23ACE0E60009A789 /* ProgressView.swift in Sources */,
 				44B0323523ACB92F0009A789 /* AppConstants.swift in Sources */,
 				44B0322C23ABCA3F0009A789 /* ProductCell.swift in Sources */,
 			);
@@ -526,6 +690,7 @@
 		};
 		44B0321F23ABC12A0009A789 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC69AA6F84239486719E9CC4 /* Pods-DubizzleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +708,7 @@
 		};
 		44B0322023ABC12A0009A789 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 106D42681B316538ED90C9AD /* Pods-DubizzleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +726,7 @@
 		};
 		44B0322223ABC12A0009A789 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A12FCA23D07948DF559CF09 /* Pods-DubizzleAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -580,6 +747,7 @@
 		};
 		44B0322323ABC12A0009A789 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00135877E9BCAF73577B0367 /* Pods-DubizzleAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -600,6 +768,7 @@
 		};
 		44B0322523ABC12A0009A789 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 748F0ABCDF9A0E3A9B2405D7 /* Pods-DubizzleApp-DubizzleAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -619,6 +788,7 @@
 		};
 		44B0322623ABC12A0009A789 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDDB1E1D267E7F995FB6FEC1 /* Pods-DubizzleApp-DubizzleAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

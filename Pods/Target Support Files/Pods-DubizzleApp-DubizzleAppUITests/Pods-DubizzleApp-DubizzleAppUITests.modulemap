@@ -1,0 +1,6 @@
+framework module Pods_DubizzleApp_DubizzleAppUITests {
+  umbrella header "Pods-DubizzleApp-DubizzleAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

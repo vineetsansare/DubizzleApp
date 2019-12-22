@@ -14,10 +14,11 @@ class ViewController: UIViewController {
     
     //MARK: Outlets
     
+    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var productListCollectionView: UICollectionView!
     private var productList: Array<ProductModel>?
-    
-    let images = [#imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail"), #imageLiteral(resourceName: "coffeemug_thumbnail")]
+    private var filteredProductList: Array<ProductModel>? = Array<ProductModel>()
+    private var resultSearchController = UISearchController(searchResultsController: nil)
     
     //MARK: View Lifecycle methods
     
@@ -25,11 +26,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         getProductList()
+        setupSearchBar()
+    }
+    
+    //MARK: Private methods
+    
+    private func setupSearchBar() {
+        resultSearchController.searchResultsUpdater = self
+        resultSearchController.hidesNavigationBarDuringPresentation = false
+        resultSearchController.dimsBackgroundDuringPresentation = false
+        resultSearchController.searchBar.sizeToFit()
+        resultSearchController.searchBar.barTintColor = AppConstants.RED_COLOR
+        headerView.addSubview(resultSearchController.searchBar)
+        
+        definesPresentationContext = false
     }
 
     //MARK: API calls
     
-    func getProductList() {
+    private func getProductList() {
         ProgressView.sharedInstance.showProgressViewNow()
         let productNetworkAdapter = ProductNetworkAdapter()
         productNetworkAdapter.getProducts { (products, error) in
@@ -45,25 +60,45 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard productList != nil else {
+        
+        guard productList != nil || filteredProductList!.count > 0 else {
             return 0
         }
-        return productList!.count
+        
+        if resultSearchController.isActive {
+            return filteredProductList!.count
+        } else {
+            return productList!.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
         
-        guard let products = productList, let thumbnailURLs = products[indexPath.row].productThumbnailURLs else {
-            return UICollectionViewCell()
+        if self.resultSearchController.isActive {
+            guard let products = filteredProductList, let thumbnailURLs = products[indexPath.row].productThumbnailURLs else {
+                return UICollectionViewCell()
+            }
+            
+            cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
+            cell.productNameLabel.text = products[indexPath.row].productName
+            cell.productNameLabel.textColor = .white
+            
+            cell.productPriceLabel.text = "\(String(describing: products[indexPath.row].productPrice!))"
+            cell.productPriceLabel.textColor = .white
+        } else {
+            guard let products = productList, let thumbnailURLs = products[indexPath.row].productThumbnailURLs else {
+                return UICollectionViewCell()
+            }
+            
+            cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
+            cell.productNameLabel.text = products[indexPath.row].productName
+            cell.productNameLabel.textColor = .white
+            
+            cell.productPriceLabel.text = "\(String(describing: products[indexPath.row].productPrice!))"
+            cell.productPriceLabel.textColor = .white
         }
         
-        cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
-        cell.productNameLabel.text = products[indexPath.row].productName
-        cell.productNameLabel.textColor = .white
-        
-        cell.productPriceLabel.text = "\(String(describing: products[indexPath.row].productPrice!))"
-        cell.productPriceLabel.textColor = .white
         return cell
     }
 }
@@ -77,5 +112,19 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         let cellSpacing: CGFloat = 5
         
         return CGSize(width: ((collectionViewWidth/numberOfColumns) - (xInsets + cellSpacing)), height: (collectionViewWidth/numberOfColumns) - (xInsets + cellSpacing))
+    }
+}
+
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredProductList!.removeAll(keepingCapacity: false)
+        let searchText = searchController.searchBar.text!
+        
+        for item in productList! {
+            if (item.productName?.starts(with: searchText))! {
+                filteredProductList!.append(item)
+            }
+        }
+        productListCollectionView.reloadData()
     }
 }

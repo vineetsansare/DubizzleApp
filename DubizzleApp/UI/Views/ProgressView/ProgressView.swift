@@ -27,7 +27,8 @@ open class ProgressView {
     }
     
     open func showProgressViewNow() {
-        let view = (UIApplication.shared.delegate as! AppDelegate).window!
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let view = appDelegate.window!
         
         containerView.frame = view.frame
         containerView.center = view.center

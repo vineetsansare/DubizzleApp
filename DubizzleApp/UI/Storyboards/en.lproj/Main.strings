@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "productNameLabel"; ObjectID = "Mjg-hg-DXR"; */
+"Mjg-hg-DXR.text" = "productNameLabel";
+
+/* Class = "UINavigationItem"; title = "Dubizzle"; ObjectID = "YbH-n7-oBK"; */
+"YbH-n7-oBK.title" = "Dubizzle";
+
+/* Class = "UILabel"; text = "priceLabel"; ObjectID = "hu7-3p-s2v"; */
+"hu7-3p-s2v.text" = "priceLabel";

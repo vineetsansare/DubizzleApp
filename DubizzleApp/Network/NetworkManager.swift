@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 typealias ServiceResponse = (Any?, Error?) -> Void
 

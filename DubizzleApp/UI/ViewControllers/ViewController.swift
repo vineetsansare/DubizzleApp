@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var productList: Array<ProductModel>?
     var filteredProductList: Array<ProductModel>? = Array<ProductModel>()
     var resultSearchController = UISearchController(searchResultsController: nil)
+    var selectedProduct: ProductModel?
     
     //MARK: View Lifecycle methods
     
@@ -61,6 +62,19 @@ class ViewController: UIViewController {
                 ProgressView.sharedInstance.hideProgressView()
                 self.productListCollectionView.reloadData()                
             }            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showProductDetails" {
+            
+            let cell = sender as! ProductCell
+            let indexPath = self.productListCollectionView!.indexPath(for: cell)
+            let selectedProd = self.productList![indexPath!.row] as ProductModel
+            
+            let productDetailsViewController = segue.destination as? ProductDetailsViewController
+            productDetailsViewController?.product = selectedProd
+            productDetailsViewController?.image = cell.productImageView.image
         }
     }
 }
@@ -140,3 +154,5 @@ extension ViewController: UISearchResultsUpdating {
         productListCollectionView.reloadData()
     }
 }
+
+

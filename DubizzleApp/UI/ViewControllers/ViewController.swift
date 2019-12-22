@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var productListCollectionView: UICollectionView!
-    private var productList: Array<ProductModel>?
-    private var filteredProductList: Array<ProductModel>? = Array<ProductModel>()
-    private var resultSearchController = UISearchController(searchResultsController: nil)
+    var productList: Array<ProductModel>?
+    var filteredProductList: Array<ProductModel>? = Array<ProductModel>()
+    var resultSearchController = UISearchController(searchResultsController: nil)
     
     //MARK: View Lifecycle methods
     
@@ -45,6 +45,14 @@ class ViewController: UIViewController {
     //MARK: API calls
     
     private func getProductList() {
+        guard Reachability.isConnectedToNetwork() else {
+            let errorTextToDisplay = "Please check your internet connectivity & try again."
+            let alertController = UIAlertController(title: "No Internet!", message: errorTextToDisplay, preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Ok!", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         ProgressView.sharedInstance.showProgressViewNow()
         let productNetworkAdapter = ProductNetworkAdapter()
         productNetworkAdapter.getProducts { (products, error) in

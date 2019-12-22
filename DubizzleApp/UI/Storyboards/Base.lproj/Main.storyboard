@@ -65,6 +65,7 @@
                                             <constraint firstItem="hu7-3p-s2v" firstAttribute="top" secondItem="jae-JL-MBO" secondAttribute="topMargin" constant="5" id="0Ct-1A-aP5"/>
                                             <constraint firstItem="Y7G-yX-jVi" firstAttribute="top" secondItem="jae-JL-MBO" secondAttribute="top" id="5Q6-Xe-5K0"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="hu7-3p-s2v" secondAttribute="trailing" constant="5" id="BnS-1f-R65"/>
+                                            <constraint firstItem="hu7-3p-s2v" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jae-JL-MBO" secondAttribute="leading" symbolic="YES" id="OJI-as-CLa"/>
                                             <constraint firstItem="Y7G-yX-jVi" firstAttribute="leading" secondItem="jae-JL-MBO" secondAttribute="leading" id="YxQ-ch-4cg"/>
                                             <constraint firstItem="K1a-n9-DL3" firstAttribute="leading" secondItem="jae-JL-MBO" secondAttribute="leadingMargin" constant="5" id="cwG-57-nGI"/>
                                             <constraint firstAttribute="trailing" secondItem="Y7G-yX-jVi" secondAttribute="trailing" id="hpj-kR-YYF"/>
@@ -81,6 +82,7 @@
                                             <outlet property="productImageView" destination="Y7G-yX-jVi" id="VAK-sv-c0w"/>
                                             <outlet property="productNameLabel" destination="Mjg-hg-DXR" id="IsV-Ll-24m"/>
                                             <outlet property="productPriceLabel" destination="hu7-3p-s2v" id="ed0-27-H5f"/>
+                                            <segue destination="3Ma-Ia-jGg" kind="show" identifier="showProductDetails" id="Fhx-zJ-7dd"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -129,6 +131,10 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="0.0"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,6 +148,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqA-cc-bYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="350.72463768115944" y="-536.38392857142856"/>
+        </scene>
+        <!--Product Details View Controller-->
+        <scene sceneID="W8t-q5-3Iz">
+            <objects>
+                <viewController id="3Ma-Ia-jGg" customClass="ProductDetailsViewController" customModule="DubizzleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X4n-4g-hEn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ohc-uz-FLT">
+                                <rect key="frame" x="20" y="155" width="374" height="262"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ohc-uz-FLT" secondAttribute="height" multiplier="414:275" id="UVJ-YZ-ZG0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8zd-QK-1hG">
+                                <rect key="frame" x="10" y="441.5" width="394" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q06-Wg-QFM">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="productNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-LL-iYt">
+                                        <rect key="frame" x="0.0" y="33.5" width="394" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="addedOnLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUK-EM-cun">
+                                        <rect key="frame" x="0.0" y="67" width="394" height="14"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ohc-uz-FLT" firstAttribute="leading" secondItem="3BX-0D-77V" secondAttribute="leading" constant="20" id="0LT-0d-ukH"/>
+                            <constraint firstItem="3BX-0D-77V" firstAttribute="trailing" secondItem="8zd-QK-1hG" secondAttribute="trailing" constant="10" id="5zq-7b-nzX"/>
+                            <constraint firstItem="Ohc-uz-FLT" firstAttribute="top" secondItem="3BX-0D-77V" secondAttribute="top" constant="15" id="Tti-7l-Pgt"/>
+                            <constraint firstItem="8zd-QK-1hG" firstAttribute="leading" secondItem="3BX-0D-77V" secondAttribute="leading" constant="10" id="XJd-k0-NSH"/>
+                            <constraint firstItem="8zd-QK-1hG" firstAttribute="top" secondItem="Ohc-uz-FLT" secondAttribute="bottom" constant="25" id="ofb-SO-UIL"/>
+                            <constraint firstItem="Ohc-uz-FLT" firstAttribute="trailing" secondItem="3BX-0D-77V" secondAttribute="trailing" id="ye7-L7-EgU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3BX-0D-77V"/>
+                    </view>
+                    <connections>
+                        <outlet property="productAddedOnLabel" destination="FUK-EM-cun" id="VsL-Vs-Hg9"/>
+                        <outlet property="productImage" destination="Ohc-uz-FLT" id="l98-C3-f13"/>
+                        <outlet property="productNameLabel" destination="aOY-LL-iYt" id="06f-RU-s0i"/>
+                        <outlet property="productPriceLabel" destination="q06-Wg-QFM" id="DXZ-4T-A33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhh-iU-9bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="-536.38392857142856"/>
         </scene>
     </scenes>
     <resources>

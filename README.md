@@ -30,9 +30,21 @@ Once you have clonned the app to your local system, you can fire-up the app by o
 - App also runs on iPad
 - App is tested on simulators of iPhone Xs /iPad (6th gen) running on iOS 12.4 
 
-### Portrait mode 
+### Screenshots
 
-<Screenshot will be added soon>
+**Product Listings screen**
+
+<img width="1159" alt="productListing" src="https://user-images.githubusercontent.com/6418402/71324228-b9bd4d80-24f5-11ea-8159-38f2ed9a8679.png">
+
+**Product Details screen**
+
+<img width="1162" alt="productDetails" src="https://user-images.githubusercontent.com/6418402/71324227-b924b700-24f5-11ea-8979-e02524a4ed8e.png">
+
+**Search Product screen**
+
+<img width="1143" alt="productSearch" src="https://user-images.githubusercontent.com/6418402/71324229-b9bd4d80-24f5-11ea-9b5b-c68a543f3407.png">
+
+
 
 ## App Architecture
 

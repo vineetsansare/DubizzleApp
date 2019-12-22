@@ -39,33 +39,38 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Y7G-yX-jVi">
                                                     <rect key="frame" x="0.0" y="0.0" width="365" height="362"/>
                                                 </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="K1a-n9-DL3">
-                                                    <rect key="frame" x="18" y="280" width="329" height="64"/>
+                                                <stackView opaque="NO" contentMode="center" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="K1a-n9-DL3">
+                                                    <rect key="frame" x="13" y="333" width="339" height="21"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="productNameLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjg-hg-DXR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="29.5"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-3p-s2v">
-                                                            <rect key="frame" x="0.0" y="40.5" width="329" height="23.5"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="productNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjg-hg-DXR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="339" height="21"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-3p-s2v">
+                                                    <rect key="frame" x="277" y="57" width="75" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="w5k-oM-iL2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="hu7-3p-s2v" firstAttribute="top" secondItem="jae-JL-MBO" secondAttribute="topMargin" constant="5" id="0Ct-1A-aP5"/>
                                             <constraint firstItem="Y7G-yX-jVi" firstAttribute="top" secondItem="jae-JL-MBO" secondAttribute="top" id="5Q6-Xe-5K0"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="hu7-3p-s2v" secondAttribute="trailing" constant="5" id="BnS-1f-R65"/>
                                             <constraint firstItem="Y7G-yX-jVi" firstAttribute="leading" secondItem="jae-JL-MBO" secondAttribute="leading" id="YxQ-ch-4cg"/>
-                                            <constraint firstItem="K1a-n9-DL3" firstAttribute="leading" secondItem="jae-JL-MBO" secondAttribute="leadingMargin" constant="10" id="cwG-57-nGI"/>
+                                            <constraint firstItem="K1a-n9-DL3" firstAttribute="leading" secondItem="jae-JL-MBO" secondAttribute="leadingMargin" constant="5" id="cwG-57-nGI"/>
                                             <constraint firstAttribute="trailing" secondItem="Y7G-yX-jVi" secondAttribute="trailing" id="hpj-kR-YYF"/>
                                             <constraint firstAttribute="bottom" secondItem="Y7G-yX-jVi" secondAttribute="bottom" id="lrP-n2-6yL"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="K1a-n9-DL3" secondAttribute="trailing" constant="10" id="o4G-r5-Ldx"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="K1a-n9-DL3" secondAttribute="bottom" constant="10" id="qpW-b8-Umc"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="K1a-n9-DL3" secondAttribute="trailing" constant="5" id="o4G-r5-Ldx"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="K1a-n9-DL3" secondAttribute="bottom" id="qpW-b8-Umc"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

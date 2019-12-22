@@ -82,6 +82,15 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCell
+        cell.productNameLabel.backgroundColor = AppConstants.TRANSLUCENT_COLOR
+        cell.productNameLabel.textColor = .white
+        cell.productNameLabel.layer.masksToBounds = true
+        cell.productNameLabel.layer.cornerRadius = 10
+        
+        cell.productPriceLabel.backgroundColor = .white
+        cell.productPriceLabel.textColor = AppConstants.RED_COLOR
+        cell.productPriceLabel.layer.masksToBounds = true
+        cell.productPriceLabel.layer.cornerRadius = 10
         
         if self.resultSearchController.isActive {
             guard let products = filteredProductList, let thumbnailURLs = products[indexPath.row].productThumbnailURLs else {
@@ -90,10 +99,8 @@ extension ViewController: UICollectionViewDataSource {
             
             cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
             cell.productNameLabel.text = products[indexPath.row].productName
-            cell.productNameLabel.textColor = .white
-            
             cell.productPriceLabel.text = "\(String(describing: products[indexPath.row].productPrice!))"
-            cell.productPriceLabel.textColor = .white
+            
         } else {
             guard let products = productList, let thumbnailURLs = products[indexPath.row].productThumbnailURLs else {
                 return UICollectionViewCell()
@@ -101,10 +108,7 @@ extension ViewController: UICollectionViewDataSource {
             
             cell.productImageView.sd_setImage(with: URL(string: thumbnailURLs[0]), placeholderImage: UIImage(named: "img_placeholder"))
             cell.productNameLabel.text = products[indexPath.row].productName
-            cell.productNameLabel.textColor = .white
-            
-            cell.productPriceLabel.text = "\(String(describing: products[indexPath.row].productPrice!))"
-            cell.productPriceLabel.textColor = .white
+            cell.productPriceLabel.text = " \(String(describing: products[indexPath.row].productPrice!)) "
         }
         
         return cell
